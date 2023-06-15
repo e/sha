@@ -24,7 +24,7 @@ h1 {font-family: 'Berkshire Swash', cursive}
 <body>
 
   <!-- Header -->
-<header class="w3-container w3-black w3-center" style="padding:80px 16px 0px">
+<header class="w3-container w3-black w3-center" style="padding:80px 16px 0px;border">
   <h1 class="w3-margin w3-jumbo">Chamanismo en Madrid</h1>
   <p class="w3-xlarge">Viajes a la Amazonia</p>
   <div class="space-30"></div>
@@ -32,8 +32,8 @@ h1 {font-family: 'Berkshire Swash', cursive}
 <!-- Navbar -->
   <div class="w3-center">
     <div id="sha-menu" class="green1 w3-card w3-left-align w3-large text-black">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="toggleButton()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a id="twots" href="{% url 'twots' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Chamanismo</a>
+      <a id="toggle-menu-link" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="toggleButton()" title="Toggle Navigation Menu">Menu &nbsp;<i class="fa fa-bars"></i></a>
+      <a id="twots" href="{% url 'twots' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Chamanismo</a>
       <a id="kkc" href="{% url 'kkc' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Kurikindi Kawsay</a>
       <a id="ceremonies" href="{% url 'ceremonies' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Ceremonias</a>
       <a id="training" href="{% url 'training' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Formación</a>
@@ -42,14 +42,13 @@ h1 {font-family: 'Berkshire Swash', cursive}
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="toggleButton()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div id="navDemo" class="green1 w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
       <a id="twots" href="{% url 'twots' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Chamanismo</a>
-      <a id="kkc" href="{% url 'kkc' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Kurikindi Kawsay</a>
-      <a id="ceremonies" href="{% url 'ceremonies' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Ceremonias</a>
-      <a id="training" href="{% url 'training' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Formación</a>
-      <a id="project" href="{% url 'project' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Contacto</a>
-      <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Proyecto</a>
+      <a id="kkc" href="{% url 'kkc' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Kurikindi Kawsay</a>
+      <a id="ceremonies" href="{% url 'ceremonies' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Ceremonias</a>
+      <a id="training" href="{% url 'training' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Formación</a>
+      <a id="project" href="{% url 'project' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Proyecto</a>
+      <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Contacto</a>
     </div>
   </div>
 

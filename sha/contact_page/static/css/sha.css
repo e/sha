@@ -1,7 +1,8 @@
 header{background: url("/static/img/forest11.jpg") 50% 0 no-repeat fixed}
-h1{font-size:40px}
-h5{font-size:24px}
+h1{font-size:3em}
+h5{font-size:1.7em}
 #sha-menu{display:inline-block}
+#toggle-menu-link{text-align:right;display:block;}
 .space-30{height:100px}
 .green1{background-color:#75895d!important}
 .green2-hover:hover{background-color:#aac197!important}
@@ -11,8 +12,9 @@ h5{font-size:24px}
 .text-green1{color:#75895d}
 .text-black{color:#000}
 .text-white{color:#ffffff}
-.sha-title{font-size:26px}
-.sha-text{font-size:22px}
+.sha-title{font-size:1.7em}
+.sha-text{font-size:1.5em}
 .w3-padding-large{font-size:22px}
-.w3-jumbo{font-size:80px!important}
+.w3-jumbo{font-size:calc(3em + 1vw)!important}
 .w3-xlarge{font-size:40px!important}
+.outer-img{display:flex;align-items:center;flex-wrap:wrap;}

@@ -44,6 +44,7 @@ def contact(request):
             message = form.cleaned_data["message"]
             sender = form.cleaned_data["sender"]
             cc_myself = form.cleaned_data["cc_myself"]
+            message += f'\n\n\nSent by {sender}'
 
             recipients = ["marcosbartolome@gmail.com"]
             if cc_myself:

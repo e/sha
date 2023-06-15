@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8s^-x(1i2qba*dh6m3zka-s3bx%sapjt37c#e#s+t(u89#!gzw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chamanismomadrid.com', 'localhost']
 
 
 # Application definition
@@ -133,3 +133,4 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 STATIC_ROOT = BASE_DIR / 'static'
+CSRF_TRUSTED_ORIGINS = ['http://chamanismomadrid.com','http://127.0.0.1','https://*.chamanismomadrid.com','https://*.127.0.0.1']
