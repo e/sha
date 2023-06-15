@@ -1,0 +1,24 @@
+{% extends "contact_page/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container green3">
+  <div class="w3-content">
+    <div class="w3-container green2 w3-center">
+      <p class="sha-text">Las mejores personas en quien confiar para montar un negocio ecológico, bueno para el planeta y para mejorar la calidad de la alimentación de las personas y la fomentar la preservación del bosque de la Amazonia y de las diferentes tribus y culturas que lo habitan son los propios indígenas, por eso queremos invertir dinero en su proyecto.</p>
+      <img style="margin:20px;" src="{% static 'img/kkc2.jpg' %}" alt="Kurikindi kawsay centre">
+      <p class="sha-text">Actualmente el centro Kurikindi Kawsay consiste en diez preciosas cabañas con capacidad para dos personas y se pretende ampliar la capacidad del centro. El proyecto consiste en comprar un terreno para ponerlo en manos de este chamán ecuatoriano y la tribu Kichwa. Estamos en contacto permanente con ellos y estan deseando llevar a cabo el proyecto. Para ellos seria de gran ayuda, y además de construir más cabañas pueden encargarse de sembrar árboles, cacao, maíz, Ayahuasca para exportacion y de criar cerdos, pollos y peces para su venta. La inversión es pequeña y se trata de una granja ecológica gestionada por ellos. Es un proyecto rentable y bueno para el bosque. Si estás interesado en poder viajar a la Amazonia con total libertad todos los años y quieres invertir en la granja no dudes en ponerte en contacto con nosotros, podemos organizar un viaje a Ecuador para presentarte el proyecto y que puedas conocer a los trabajadores.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container green4 w3-center w3-opacity w3-padding-64">
+  <h1 class="w3-margin w3-xlarge text-white">Chamanismo en Ecuador</h1><br/>
+  <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-padding-large green2-hover text-white">Formulario de contacto</a>
+
+</div>
+
+{% endblock %}

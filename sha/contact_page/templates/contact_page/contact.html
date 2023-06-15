@@ -1,0 +1,43 @@
+{% extends "contact_page/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container green3">
+  <div class="w3-content">
+    <div class="w3-container green2 w3-center">
+      <h1>Formulario de contacto</h1>
+      <h5 class="sha-title">Para cualquier consulta contacta con nosotros</h5>
+        <form method="post">
+          <div>
+            {% csrf_token %}
+          </div>
+          <div>
+            <p class="sha-text">
+              <label for="id_subject">Asunto:</label>
+              <input type="text" name="subject" maxlength="100" required="" id="id_subject" style="width:80%">
+            </p>
+            <p class="sha-text">
+              <label for="id_message">Mensaje:</label>
+              <textarea name="message" cols="40" rows="10" required="" id="id_message" style="width:100%"></textarea>
+            </p>
+            <p class="sha-text">
+              <label for="id_sender">Introduce tu email para que podamos contactar contigo:</label>
+              <input type="email" name="sender" required="" id="id_sender" style="width:80%">
+            </p>
+          </div>
+          <input class="w3-button green1 green4-hover sha-text" type="submit" value="Enviar">
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container green4 w3-center w3-padding-64">
+  <h1 class="w3-margin w3-xlarge text-white">Chamanismo en Ecuador</h1><br/>
+  <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-padding-large green2-hover text-white">Formulario de contacto</a>
+
+</div>
+
+{% endblock %}

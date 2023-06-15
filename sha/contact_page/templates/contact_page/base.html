@@ -1,0 +1,88 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% translate "Chamanismo en Madrid" %}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/sha-w3c.css' %}">
+<link rel="stylesheet" href="{% static 'css/sha.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+<style>
+body,h2,h3,h4,h5,h6 {font-family: 'Marcellus', serif}
+h1 {font-family: 'Berkshire Swash', cursive}
+.w3-bar,#sha-menu,button {font-family: 'Marcellus', serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+<header class="w3-container w3-black w3-center" style="padding:80px 16px 0px">
+  <h1 class="w3-margin w3-jumbo">Chamanismo en Madrid</h1>
+  <p class="w3-xlarge">Viajes a la Amazonia</p>
+  <div class="space-30"></div>
+
+<!-- Navbar -->
+  <div class="w3-center">
+    <div id="sha-menu" class="green1 w3-card w3-left-align w3-large text-black">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="toggleButton()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a id="twots" href="{% url 'twots' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Chamanismo</a>
+      <a id="kkc" href="{% url 'kkc' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Kurikindi Kawsay</a>
+      <a id="ceremonies" href="{% url 'ceremonies' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Ceremonias</a>
+      <a id="training" href="{% url 'training' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Formación</a>
+      <a id="project" href="{% url 'project' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Proyecto</a>
+      <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Contacto</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="toggleButton()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a id="twots" href="{% url 'twots' %}" class="w3-bar-item w3-button w3-padding-large green2-hover">Chamanismo</a>
+      <a id="kkc" href="{% url 'kkc' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Kurikindi Kawsay</a>
+      <a id="ceremonies" href="{% url 'ceremonies' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Ceremonias</a>
+      <a id="training" href="{% url 'training' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Formación</a>
+      <a id="project" href="{% url 'project' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Contacto</a>
+      <a id="contact" href="{% url 'contact' %}" class="w3-bar-item w3-button w3-hide-small w3-padding-large green2-hover">Proyecto</a>
+    </div>
+  </div>
+
+</header>
+
+{% block content %}
+{% endblock %}
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center">
+  <img src="{% static 'img/wc1.jpg' %}" alt="logo">
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleButton() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+function activateTab() {
+  var activeTab = document.getElementById("{{ active_tab }}");
+    if (activeTab.className.indexOf("green3") == -1) {
+    activeTab.className += " green3";
+  } else {
+    activeTab.className = activeTab.className.replace(" green3", " green3");
+  }
+}
+activateTab();
+</script>
+
+</body>
+</html>
